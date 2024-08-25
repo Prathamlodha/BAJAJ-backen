@@ -1,0 +1,34 @@
+### Test Case 1: Mixed Numbers and Alphabets
+POST http://localhost:3001/api/v1/assignment/bfhl
+Content-Type: application/json
+
+{
+  "data": ["M", "1", "334", "4", "B", "Z", "a"]
+}
+
+### Test Case 2: Only Numbers
+POST http://localhost:3001/api/v1/assignment/bfhl
+Content-Type: application/json
+
+{
+  "data": ["2", "4", "5", "92"]
+}
+
+### Test Case 3: Only Alphabets (with multiple lowercase)
+POST http://localhost:3001/api/v1/assignment/bfhl
+Content-Type: application/json
+
+{
+  "data": ["A", "C", "Z", "c", "i"]
+}
+
+### Test Case 4: Mixed Invalid Data
+POST http://localhost:3001/api/v1/assignment/bfhl
+Content-Type: application/json
+
+{
+  "data": ["Hello", 123, "x", "5", "G", true]
+}
+
+### Test Case 5: GET Request
+GET http://localhost:3001/api/v1/assignment/bfhl
